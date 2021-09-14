@@ -22,7 +22,9 @@ RUN set -x \
 	&& chmod -R 744 "${STEAM_SAVEDIR}" "${HOME}/.config/"
 
 ENV SERVER_NAME="Valheim Docker" \
-	PORT=2456 \
+	PORT=24456 \
+	QUERYPORT=24457 \
+	WORLDPORT=24458 \
 	WORLD="Dedicated" \
 	SERVER_PASSWORD="secret"
 
@@ -39,12 +41,12 @@ VOLUME ${STEAM_SAVEDIR}
 
 WORKDIR ${HOME}
 
-EXPOSE 	2456/udp \
-        2457/udp \
-        2458/udp \
-        2456/tcp \
-        2457/tcp \
-        2458/tcp
+EXPOSE 	${PORT}/udp \
+        ${QUERYPORT}/udp \
+        ${WORLDPORT}/udp \
+        ${PORT}/tcp \
+        ${QUERYPORT}/tcp \
+        ${WORLDPORT}/tcp
 
 
 CMD ["bash", "entry.sh"]
