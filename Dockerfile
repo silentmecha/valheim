@@ -22,9 +22,9 @@ RUN set -x \
 	&& chmod -R 744 "${STEAM_SAVEDIR}" "${HOME}/.config/"
 
 ENV SERVER_NAME="Valheim Docker" \
-	PORT=24456 \
-	QUERYPORT=24457 \
-	WORLDPORT=24458 \
+	PORT=2456 \
+	QUERYPORT=2457 \
+	WORLDPORT=2458 \
 	WORLD="Dedicated" \
 	SERVER_PASSWORD="secret"
 
