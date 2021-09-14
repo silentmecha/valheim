@@ -39,8 +39,6 @@ Updating is still currently in devolpment so once that is sorted this README wil
 
 ### Environment Variables
 
-### Environment Variables
-
 | Variable Name   | Default Value  | Description                                                                                                         |
 |-----------------|----------------|---------------------------------------------------------------------------------------------------------------------|
 | SERVER_NAME     | Valheim Docker | Name of your server as seen in server browser (accepts spaces)                                                      |
