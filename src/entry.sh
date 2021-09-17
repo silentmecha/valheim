@@ -5,8 +5,9 @@ export SteamAppId=892970
 
 # NOTE: Without the wait the script exists before giving the server time to properly stop
 function clean_up {
-	kill -SIGINT $serverPID
+	kill -SIGINT $(pidof "valheim_server.x86_64")
 	wait
+	kill -SIGINT $serverPID
 }
 
 # Setup trap
